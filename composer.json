@@ -1,0 +1,23 @@
+{
+    "name": "involve-gmbh/view-author-entry-permission",
+    "require" : {
+        "php": "^8.0",
+        "statamic/cms": "3.2.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Involve\\ViewAuthorEntryPermission\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "View Author Entry Permission",
+            "description": "Provides a new set of permissions to block users from viewing entries made by other authors."
+        },
+        "laravel": {
+            "providers": [
+                "Involve\\ViewAuthorEntryPermission\\ServiceProvider"
+            ]
+        }
+    }
+}
