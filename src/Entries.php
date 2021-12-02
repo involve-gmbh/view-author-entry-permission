@@ -3,9 +3,12 @@
 namespace Involve\ViewAuthorEntryPermission;
 
 use Statamic\Facades\Collection;
-use Statamic\Fieldtypes\Entries;
+use Statamic\Fieldtypes\Entries as BaseEntries;
 
-class FilteringAuthorEntries extends Entries
+/**
+ * Statamic uses the class name for the actual fieldtype name, so the name MUST not change.
+ */
+class Entries extends BaseEntries
 {
     public function __construct(
         private AuthorFilterApplicator $authorFilterApplicator

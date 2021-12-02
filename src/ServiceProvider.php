@@ -4,7 +4,7 @@ namespace Involve\ViewAuthorEntryPermission;
 
 use Statamic\Facades\Collection;
 use Statamic\Facades\Permission;
-use Statamic\Fieldtypes\Entries;
+use Statamic\Fieldtypes\Entries as BaseEntries;
 use Statamic\Http\Controllers\CP\Collections\CollectionsController;
 use Statamic\Http\Controllers\CP\Collections\EntriesController;
 use Statamic\Providers\AddonServiceProvider;
@@ -18,8 +18,8 @@ class ServiceProvider extends AddonServiceProvider
             FilteringAuthorEntriesController::class,
         );
         $this->app->bind(
+            BaseEntries::class,
             Entries::class,
-            FilteringAuthorEntries::class,
         );
         $this->app->bind(
             CollectionsController::class,
