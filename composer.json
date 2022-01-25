@@ -2,7 +2,7 @@
     "name": "involve-gmbh/view-author-entry-permission",
     "require" : {
         "php": "^8.0",
-        "statamic/cms": "3.2.24"
+        "statamic/cms": "3.*"
     },
     "autoload": {
         "psr-4": {
