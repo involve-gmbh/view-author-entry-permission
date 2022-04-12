@@ -4,11 +4,11 @@ namespace Involve\ViewAuthorEntryPermission;
 
 use Statamic\Entries\Collection;
 use Statamic\Facades\User;
-use Statamic\Query\Builder;
+use Statamic\Contracts\Entries\QueryBuilder;
 
 class AuthorFilterApplicator
 {
-    public function applyFilterIfNecessary(Collection $collection, Builder $originalQuery): Builder
+    public function applyFilterIfNecessary(Collection $collection, QueryBuilder $originalQuery): QueryBuilder
     {
         if ($this->shouldSeeOtherAuthorsEntries($collection))
             return $originalQuery;
